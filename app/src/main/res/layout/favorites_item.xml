@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true"
+    android:id="@+id/favorite_card_root">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:id="@+id/favorite_item_layout">
+        <TextView
+            android:id="@+id/favoritesText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginRight="40dp"
+            android:fontFamily="sans-serif-medium"
+
+            tools:text="Случай из практики фотографа. Как-то раз снимал я с редактором моды Наташей раскладку детских вещей для журнала.
+Ну там носочки, маечки, трусики и прочую лабуду. Наташа всё аккуратненько раскладывает, я снимаю... ну и так час за часом."/>
+
+
+
+        <!--
+                <CheckBox
+                    android:id="@+id/favorite_chb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/toggle_favorite"
+                    android:layout_gravity="center_vertical"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true" />
+        -->
+
+
+        <ImageView
+            android:id="@+id/favorite_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_star_on"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+
+        <!--    <ImageView
+                    android:id="@+id/favorite_off"
+                    app:srcCompat="@drawable/ic_star_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                android:visibility="gone"/>-->
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

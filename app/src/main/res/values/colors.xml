@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="yellow">#f5c549</color>
+
+    <color name="colorPrimaryDark">#a00037</color>
+    <color name="colorPrimary">#d81b60</color>
+    <color name="primary_light">#fe739d</color>
+    <color name="colorAccent">#ffe5ef</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="liteGrey">#999</color>
+    <color name="grey">#666</color>
+
+
+    <color name="refresh_progress_1">@color/primary_light</color>
+    <color name="refresh_progress_2">@color/colorPrimary</color>
+    <color name="refresh_progress_3">@color/colorPrimaryDark</color>
+</resources>

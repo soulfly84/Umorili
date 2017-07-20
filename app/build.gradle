@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+def dbflow_version = "3.1.1"
+def compile_version = "25.3.1";
+def AAVersion = "4.1.0";
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.soulfly.umorili"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+
+    annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
+    compile "org.androidannotations:androidannotations-api:$AAVersion"
+    compile "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
+
+    compile "com.android.support:appcompat-v7:${compile_version}"
+    compile "com.android.support:design:${compile_version}"
+    testCompile 'junit:junit:4.12'
+    compile "com.android.support:recyclerview-v7:${compile_version}"
+    compile "com.android.support:cardview-v7:${compile_version}"
+
+    //apt "org.androidannotations:androidannotations:4.1.0"
+
+
+    /*apt "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"*/
+    annotationProcessor "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
+    compile "com.github.Raizlabs.DBFlow:dbflow-core:${dbflow_version}"
+    compile "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
+
+    /*compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:support-v4:${compile_version}'*/
+
+    //Moxy
+    compile 'com.arello-mobile:moxy:1.4.6'
+    provided 'com.arello-mobile:moxy-compiler:1.4.6'
+
+    //Rx
+    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    //Rest
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+}
+

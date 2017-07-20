@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/favorites_fragment_root_layout">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_of_all_favorites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/emptyFavs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha=".2"
+            app:srcCompat="@drawable/ic_mood_bad"
+            android:visibility="visible"
+            android:id="@+id/imageView" />
+
+        <TextView
+            android:layout_width="231dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.08"
+            android:layout_marginTop="10dp"
+            android:text="@string/empty_favs"
+            android:lineSpacingExtra="3dp"
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_normal" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

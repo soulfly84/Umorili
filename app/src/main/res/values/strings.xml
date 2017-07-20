@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Анекдоты</string>
+    <string name="search_title">Поиск</string>
+    <string name="item_menu_all_jokes">Анекдоты</string>
+    <string name="item_menu_favorites">Избранные</string>
+    <string name="error_no_internet">Проверьте интернет соединение</string>
+    <string name="refresh_finished">Обновлено успешно!</string>
+    <string name="unknown_error">Ошибка сервера! Попробуйте еще раз</string>
+    <string name="empty_favs">Здесь пока пусто</string>
+    <string name="update_list">Обновить</string>
+    <string name="search_nothing">По такому запросу ничего не найдено!</string>
+    <string name="delete">Удалить</string>
+</resources>
